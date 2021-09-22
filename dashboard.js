@@ -51,4 +51,4 @@ class Billboard {
 
 const billboard = new Billboard();
 const autoUpdate = () => { setTimeout(()=>{billboard.update(); autoUpdate()}, 3000) }
-autoUpdate()
+billboard.update();

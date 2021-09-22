@@ -2,6 +2,72 @@
 <html lang="en-US"><meta charset="utf-8">
 <head>
 <title>Hydroponode Dashboard</title>
+  <style>
+  #dataDiv {
+    display: grid;
+    grid-template-columns: 1fr 8fr, 3fr 3fr 3fr;
+    border: 3px ridge gray;
+    max-width: fit-content;
+    font-size: 1.5rem;
+  }
+
+  #dataDiv i {
+    font-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+    margin: 3rem 1rem 3rem 3rem;
+  }
+  #dataDiv .innerValue {
+    margin: 2rem 2rem 2rem 0rem;
+  }
+  #datestamp {
+    grid-column-start: 0;
+    grid-column-end: 2;
+    height: 2rem;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+  }
+  #battery {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    justify-content: flex-end;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+  }
+  #battery i {
+    margin: 0rem 1.25rem 0 0.5rem;
+    color: green;
+  }
+  #battery .innerValue {
+    margin: 0.75rem 0.5rem 0 0;
+  }
+  #datestamp i {
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    color: firebrick;
+  }
+  #datestamp .innerValue {
+    margin: 1.25rem 0 0 0;
+  }
+  #temperature i {
+  color: crimson;
+  }
+  #moisture i {
+  color: skyblue;
+  }
+  #light i {
+  color: gold;
+  }
+  #dataDiv #battery .innerValue {
+    margin-left: 1rem;
+  }
+  #temperature,#moisture,#light {
+    font-size: 3rem;
+  }
+</style>
 <script src="dashboard.js" ></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 

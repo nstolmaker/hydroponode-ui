@@ -39,7 +39,10 @@ class Billboard {
     const light = document.getElementById('light').querySelector('.innerValue');
 
     battery.innerHTML = this.battery
-    datestamp.innerHTML = new Date(this.datestamp).toLocaleString();
+    datestamp.innerHTML = new Date(this.datestamp).toLocaleString(undefined, {
+  timeStyle: "short",
+  dateStyle: "short"
+});
     temperature.innerHTML = Math.round(this.temperature);
     moisture.innerHTML = this.moisture;
     light.innerHTML = this.light;

@@ -40,7 +40,7 @@ class Billboard {
 
     battery.innerHTML = this.battery
     datestamp.innerHTML = new Date(this.datestamp).toLocaleString();
-    temperature.innerHTML = this.temperature;
+    temperature.innerHTML = Math.round(this.temperature);
     moisture.innerHTML = this.moisture;
     light.innerHTML = this.light;
 

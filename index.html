@@ -11,11 +11,17 @@
     font-size: 1.5rem;
   }
 
-  #dataDiv i {
+  #dataDiv #datestamp i,  #dataDiv #battery i {
     font-size: 3rem;
     height: 3rem;
     width: 3rem;
     margin: 3rem 1rem 3rem 3rem;
+  }
+  #dataDiv i {
+    font-size: 18rem;
+    height: 18rem;
+    width: 100%;
+    margin: 5rem 0rem 3rem 0rem;
   }
   #dataDiv .innerValue {
     margin: 2rem 2rem 2rem 0rem;
@@ -65,7 +71,10 @@
     margin-left: 1rem;
   }
   #temperature,#moisture,#light {
-    font-size: 3rem;
+    font-size: 10rem;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    text-align: center;
   }
 </style>
 <script src="dashboard.js" ></script>

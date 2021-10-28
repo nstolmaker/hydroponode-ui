@@ -19,16 +19,15 @@
   #dataDiv #datestamp i,  #dataDiv #battery i {
     font-size: 3rem;
     height: 3rem;
-    width: 3rem;
-    margin: 3rem 1rem 3rem 3rem;
+    min-width: 6rem;
+    margin: 2rem;
   }
   #dataDiv .innerValue {
     margin: 3rem 0;
   }
   #datestamp {
-    grid-column-start: 0;
-    grid-column-end: 2;
-    height: 5rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
     font-size: 5rem;
     justify-content: flex-end;
     align-items: flex-start;
@@ -36,7 +35,7 @@
     flex-direction: row;
   }
   #battery {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 7;
     justify-content: flex-end;
     align-items: flex-start;
@@ -50,7 +49,7 @@
     color: green;
   }
   #battery .innerValue {
-    margin: 0.75rem 0.5rem 0 0;
+    margin: 1.75rem 0.5rem 0 0;
   }
   #datestamp i {
     margin: 0.5rem 0.5rem 0 0.5rem;

@@ -23,7 +23,7 @@ class ActionHistory {
   async update() {
     this.data = await this.getLatest();
     console.log('action history: ', this.data);
-    await renderActionHistory();
+    await this.renderActionHistory();
     console.log("Finished calling renderActionHistory");
   }
 

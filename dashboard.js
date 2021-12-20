@@ -53,7 +53,23 @@ class ActionHistory {
       container.appendChild(newRow);
    });
     
-  }   
+  }
+  hide() {
+    const container = document.getElementById('container')
+    container.style.display = 'none';
+  }
+  show() {
+    const container = document.getElementById('container')
+    container.style.display = 'block';
+  }
+  toggle() {
+    const container = document.getElementById('container')
+    if (container.style.display == 'block') {
+      this.hide();
+    } else {
+      this.show();
+    }
+  }
 }
 
 
@@ -115,3 +131,4 @@ const actionHistory = new ActionHistory();
 const autoUpdate = () => { setTimeout(()=>{actionHistory.update(); billboard.update(); autoUpdate()}, 3000) }
 actionHistory.update();
 billboard.update();
+document.querySelector('.toggleActionHistory').addEventListener('click', () => actionHistory.toggle());

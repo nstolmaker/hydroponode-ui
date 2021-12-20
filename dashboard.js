@@ -58,7 +58,7 @@ class ActionHistory {
         container.appendChild(newTdMessage);
       })
     }
-    
+  }   
 }
 
 const actionHistory = new ActionHistory();

@@ -26,7 +26,7 @@ class ActionHistory {
     console.log('action history: ', lastResult);
 //     const actionHistoryDataObj = JSON.parse(lastResult);
     this.data = JSON.parse(lastResult);
-    console.log({this.data});
+    console.log('data', this.data);
     await renderActionHistory();
     console.log("Finished calling renderActionHistory");
   }

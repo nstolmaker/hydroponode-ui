@@ -46,11 +46,11 @@ class ActionHistory {
       newTdSystem.innerHTML = item.system;
       newTdAction.innerHTML = item.action;
       newTdMessage.innerHTML = item.message;
+      newRow.appendChild(newTdDate);
+      newRow.appendChild(newTdSystem);
+      newRow.appendChild(newTdAction);
+      newRow.appendChild(newTdMessage);
       container.appendChild(newRow);
-      container.appendChild(newTdDate);
-      container.appendChild(newTdSystem);
-      container.appendChild(newTdAction);
-      container.appendChild(newTdMessage);
    });
     
   }   

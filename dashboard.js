@@ -31,7 +31,6 @@ class ActionHistory {
 
     const container = document.getElementById('container');
     const newTable = document.createElement('table');
-    container.appendChild(newTable);
 
     this.data.forEach((item) => {
       const newRow = document.createElement('tr');
@@ -50,8 +49,10 @@ class ActionHistory {
       newRow.appendChild(newTdSystem);
       newRow.appendChild(newTdAction);
       newRow.appendChild(newTdMessage);
-      container.appendChild(newRow);
+      newTable.appendChild(newRow);
    });
+    
+    container.appendChild(newTable);
     
   }
   hide() {

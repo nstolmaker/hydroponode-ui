@@ -21,12 +21,8 @@ class ActionHistory {
   }
 
   async update() {
-    const jsonResp = await this.getLatest();
-    const lastResult = jsonResp;
-    console.log('action history: ', lastResult);
-//     const actionHistoryDataObj = JSON.parse(lastResult);
-    this.data = JSON.parse(lastResult);
-    console.log('data', this.data);
+    this.data = await this.getLatest();
+    console.log('action history: ', this.data);
     await renderActionHistory();
     console.log("Finished calling renderActionHistory");
   }
@@ -37,27 +33,26 @@ class ActionHistory {
     const newTable = document.createElement('table');
     container.appendChild(newTable);
 
-    const renderTable = (data, container) => {
-      data.forEach((item) => {
-        const newRow = document.createElement('tr');
-        const newTdDate = document.createElement('td');
-        const newTdSystem = document.createElement('td');
-        const newTdAction = document.createElement('td');
-        const newTdMessage = document.createElement('td');
-        newTdDate.innerHTML = new Date(item.date).toLocaleString(undefined, {
-          timeStyle: "short",
-          dateStyle: "short"
-        });
-        newTdSystem.innerHTML = item.system;
-        newTdAction.innerHTML = item.action;
-        newTdMessage.innerHTML = item.message;
-        container.appendChild(newRow);
-        container.appendChild(newTdDate);
-        container.appendChild(newTdSystem);
-        container.appendChild(newTdAction);
-        container.appendChild(newTdMessage);
-      })
-    }
+    this.data.forEach((item) => {
+      const newRow = document.createElement('tr');
+      const newTdDate = document.createElement('td');
+      const newTdSystem = document.createElement('td');
+      const newTdAction = document.createElement('td');
+      const newTdMessage = document.createElement('td');
+      newTdDate.innerHTML = new Date(item.date).toLocaleString(undefined, {
+        timeStyle: "short",
+        dateStyle: "short"
+      });
+      newTdSystem.innerHTML = item.system;
+      newTdAction.innerHTML = item.action;
+      newTdMessage.innerHTML = item.message;
+      container.appendChild(newRow);
+      container.appendChild(newTdDate);
+      container.appendChild(newTdSystem);
+      container.appendChild(newTdAction);
+      container.appendChild(newTdMessage);
+   });
+    
   }   
 }
 

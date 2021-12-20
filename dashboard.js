@@ -1,5 +1,6 @@
 
 class ActionHistory {
+  data = {};
   constructor() {
   }
   async getLatest() {

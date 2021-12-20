@@ -61,11 +61,6 @@ class ActionHistory {
   }   
 }
 
-const actionHistory = new ActionHistory();
-const autoUpdate = () => { setTimeout(()=>{actionHistory.update(); autoUpdate()}, 3000) }
-actionHistory.update();
-
-
 
 class Billboard {
   constructor() {
@@ -121,5 +116,7 @@ class Billboard {
 }
 
 const billboard = new Billboard();
-const autoUpdate = () => { setTimeout(()=>{billboard.update(); autoUpdate()}, 3000) }
+const actionHistory = new ActionHistory();
+const autoUpdate = () => { setTimeout(()=>{actionHistory.update(); billboard.update(); autoUpdate()}, 3000) }
+actionHistory.update();
 billboard.update();

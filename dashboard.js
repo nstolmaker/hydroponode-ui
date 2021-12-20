@@ -1,7 +1,8 @@
 
 class ActionHistory {
-  this.data = {};
   constructor() {
+      this.data = {};
+      this.test = "tessitng";
   }
   async getLatest() {
     // return {"id":1147,"data":"{\"temperature\":75.38,\"moisture\":62,\"light\":130,\"battery\":38}","date":"2021-09-14T23:01:09.241Z","isActive":true};

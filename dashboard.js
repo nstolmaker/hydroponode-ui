@@ -132,4 +132,6 @@ const actionHistory = new ActionHistory();
 const autoUpdate = () => { setTimeout(()=>{actionHistory.update(); billboard.update(); autoUpdate()}, 3000) }
 actionHistory.update();
 billboard.update();
-document.querySelector('.toggleActionHistory').addEventListener('click', () => actionHistory.toggle());
+window.onload = function() {
+  document.querySelector('.toggleActionHistory').addEventListener('click', () => actionHistory.toggle());
+};

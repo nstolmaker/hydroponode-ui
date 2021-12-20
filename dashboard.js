@@ -21,10 +21,12 @@ class ActionHistory {
   async update() {
     const jsonResp = await this.getLatest();
     const lastResult = jsonResp;
-    console.log(lastResult);
+    console.log('action history: ', lastResult);
 //     const actionHistoryDataObj = JSON.parse(lastResult);
     this.data = JSON.parse(lastResult);
     console.log({this.data});
+    await renderActionHistory();
+    console.log("Finished calling renderActionHistory");
   }
 
   async renderActionHistory() {

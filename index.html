@@ -76,7 +76,8 @@
   }
   #container { 
     width: 100%; 
-    height: 75%; 
+    height: auto;
+    max-height: -webkit-fill-available;
     border: 1px solid black; 
     overflow-y: auto;
     position: absolute;
@@ -84,7 +85,7 @@
     background: white;
     display: flex;
     font-size: 1.5rem;
-    padding-top: 6rem;
+    margin-top: 8rem;
   }
   #container table {
     margin: 2rem auto;
@@ -117,21 +118,23 @@
     <span class="innerValue">Battery?</span>
     <i class="fa fa-battery-three-quarters"></i>
   </div>
-  <div id="temperature">
-    <i class="fas fa-thermometer-three-quarters"></i>
-    <span class='innerValue'>Temp?</span>
-  </div>
-  <div id="moisture">
-    <i class="fas fa-tint"></i>
-    <span class='innerValue'>Wet?</span>
-  </div>
-  <div id="light">
-    <i class="fas fa-sun"></i>
-    <span class='innerValue'>Lux?</span>
+  <div id="metrics">
+    <div id="temperature">
+      <i class="fas fa-thermometer-three-quarters"></i>
+      <span class='innerValue'>Temp?</span>
+    </div>
+    <div id="moisture">
+      <i class="fas fa-tint"></i>
+      <span class='innerValue'>Wet?</span>
+    </div>
+    <div id="light">
+      <i class="fas fa-sun"></i>
+      <span class='innerValue'>Lux?</span>
+    </div>
   </div>
 </div>
 
-<div id="container" style="width:100%; height:400px; display: none; "></div>
+<div id="container" style="width:100%; display: none; "></div>
 <!-- <button name='update' value='update' onclick="billboard.update()">Update?</button> -->
 </body>
 </html>

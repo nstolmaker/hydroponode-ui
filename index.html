@@ -102,6 +102,7 @@
     grid-column-end: 7;
     z-index: 2;
     font-size: 6rem;
+    display: block;
   }
     
 #content { 
@@ -117,9 +118,6 @@
   
   <div id='header'>
     <button class='toggleActionHistory'>History</button>
-  </div>
-<div id='content'>
-  <div id='dataDiv'>
     <div id="datestamp">
       <i class="fa fa-calendar"></i>
       <span class='innerValue'>Datestamp?</span>
@@ -128,6 +126,9 @@
       <span class="innerValue">Battery?</span>
       <i class="fa fa-battery-three-quarters"></i>
     </div>
+  </div>
+<div id='content'>
+  <div id='dataDiv'>
     <div id="metrics">
       <div id="temperature">
         <i class="fas fa-thermometer-three-quarters"></i>

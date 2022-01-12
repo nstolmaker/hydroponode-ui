@@ -5,7 +5,7 @@
   <style>
   #dataDiv {
     display: grid;
-    grid-template-columns: 1fr 8fr, 3fr 3fr 3fr;
+    grid-template-columns: 1fr 8fr 3fr 3fr 3fr;
     grid-row-gap: 1.5rem;
     font-size: 1.5rem;
   }
@@ -103,6 +103,7 @@
     z-index: 2;
     font-size: 6rem;
     display: block;
+    width: 100%;
   }
     
 #content { 
@@ -111,6 +112,10 @@
 #header {
   display: flex;
 }
+#metrics {
+  display: flex;
+}
+
 </style>
 <script src="dashboard.js" ></script>
 <script src="https://code.highcharts.com/highcharts.src.js"></script>

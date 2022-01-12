@@ -103,33 +103,37 @@
     z-index: 2;
     font-size: 6rem;
   }
+    
+#root { 
+  display: flex;
 </style>
 <script src="dashboard.js" ></script>
 <script src="https://code.highcharts.com/highcharts.src.js"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-<div id='dataDiv'>
-  <button class='toggleActionHistory'>History</button>
-  <div id="datestamp">
-    <i class="fa fa-calendar"></i>
-    <span class='innerValue'>Datestamp?</span>
-  </div>
-  <div id="battery">
-    <span class="innerValue">Battery?</span>
-    <i class="fa fa-battery-three-quarters"></i>
-  </div>
-  <div id="metrics">
-    <div id="temperature">
-      <i class="fas fa-thermometer-three-quarters"></i>
-      <span class='innerValue'>Temp?</span>
+<div id='root'>
+  <div id='dataDiv'>
+    <button class='toggleActionHistory'>History</button>
+    <div id="datestamp">
+      <i class="fa fa-calendar"></i>
+      <span class='innerValue'>Datestamp?</span>
     </div>
-    <div id="moisture">
-      <i class="fas fa-tint"></i>
-      <span class='innerValue'>Wet?</span>
+    <div id="battery">
+      <span class="innerValue">Battery?</span>
+      <i class="fa fa-battery-three-quarters"></i>
     </div>
-    <div id="light">
-      <i class="fas fa-sun"></i>
-      <span class='innerValue'>Lux?</span>
+    <div id="metrics">
+      <div id="temperature">
+        <i class="fas fa-thermometer-three-quarters"></i>
+        <span class='innerValue'>Temp?</span>
+      </div>
+      <div id="moisture">
+        <i class="fas fa-tint"></i>
+        <span class='innerValue'>Wet?</span>
+      </div>
+      <div id="light">
+        <i class="fas fa-sun"></i>
+        <span class='innerValue'>Lux?</span>
+      </div>
     </div>
   </div>
 </div>

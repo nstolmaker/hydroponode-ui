@@ -73,8 +73,8 @@
   }
   #temperature,#moisture,#light {
     font-size: 10rem;
-    grid-column-start: 1;
-    grid-column-end: 7;
+/*     grid-column-start: 1;
+    grid-column-end: 7; */
     text-align: center;
   }
   #container { 
@@ -111,7 +111,7 @@
     
 #content { 
   display: flex;
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 #header {
   display: flex;
@@ -119,13 +119,15 @@
 }
 #metrics {
   display: flex;
+  flex-wrap: wrap;
 }
 
 </style>
 <script src="dashboard.js" ></script>
 <script src="https://code.highcharts.com/highcharts.src.js"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <button class='toggleActionHistory'>History</button>
+<button class='toggleActionHistory'>History</button>
+  
   <div id='header'>
     <div id="datestamp">
       <i class="fa fa-calendar"></i>

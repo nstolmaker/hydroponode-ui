@@ -4,10 +4,13 @@
 <title>Hydroponode Dashboard</title>
   <style>
   #dataDiv {
-    display: grid;
-    grid-template-columns: 1fr 8fr 3fr 3fr 3fr;
-    grid-row-gap: 1.5rem;
+/*     display: grid; */
+/*     grid-template-columns: 1fr 8fr 3fr 3fr 3fr; */
+/*     grid-row-gap: 1.5rem; */
+    display: flex;
     font-size: 1.5rem;
+    align-content: space-between;
+    flex-wrap: wrap;
   }
   #dataDiv i {
     font-size: 18rem;
@@ -108,9 +111,11 @@
     
 #content { 
   display: flex;
+    justify-content: space-evenly;
 }
 #header {
   display: flex;
+  justify-content: space-between;
 }
 #metrics {
   display: flex;
@@ -120,9 +125,8 @@
 <script src="dashboard.js" ></script>
 <script src="https://code.highcharts.com/highcharts.src.js"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  
+  <button class='toggleActionHistory'>History</button>
   <div id='header'>
-    <button class='toggleActionHistory'>History</button>
     <div id="datestamp">
       <i class="fa fa-calendar"></i>
       <span class='innerValue'>Datestamp?</span>

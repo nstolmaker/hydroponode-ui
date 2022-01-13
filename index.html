@@ -103,12 +103,8 @@
     padding: 0.75rem;
   }
   .toggleActionHistory {
-    grid-column-start: 1;
-    grid-column-end: 7;
     z-index: 2;
     font-size: 6rem;
-    display: block;
-    width: 100%;
   }
     
 #content { 
@@ -129,13 +125,13 @@
 <script src="dashboard.js" ></script>
 <script src="https://code.highcharts.com/highcharts.src.js"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<button class='toggleActionHistory'>History</button>
   
   <div id='header'>
     <div id="datestamp">
       <i class="fa fa-calendar"></i>
       <span class='innerValue'>Datestamp?</span>
     </div>
+    <button class='toggleActionHistory'>History</button>
     <div id="battery">
       <span class="innerValue">Battery?</span>
       <i class="fa fa-battery-three-quarters"></i>
